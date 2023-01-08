@@ -4,10 +4,11 @@ FROM ros:noetic-ros-core
 RUN apt update && apt upgrade -y
 
 # Install extra packages
-RUN apt install build-essential -y
 RUN apt install gdb -y
+
+# Install dependencies not included for ROS Core Docker Images
+RUN apt install build-essential -y
 RUN apt install git -y
-RUN apt install python3-catkin-tools -y
 RUN apt install python3-rosdep -y
 
 # Rosdep
