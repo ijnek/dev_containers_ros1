@@ -1,4 +1,4 @@
-FROM ros:noetic-desktop
+FROM osrf/ros:noetic-desktop
 
 # Update all packages
 RUN apt update && apt upgrade -y
