@@ -1,4 +1,4 @@
-FROM ros:noetic-ros-core
+FROM ros:noetic-perception
 
 # Update all packages
 RUN apt update && apt upgrade -y
@@ -6,13 +6,7 @@ RUN apt update && apt upgrade -y
 # Install extra packages
 RUN apt install gdb -y
 
-# Install dependencies not included for ROS Core Docker Images
-RUN apt install build-essential -y
-RUN apt install git -y
-RUN apt install python3-rosdep -y
-
-# Rosdep
-RUN rosdep init
+# Rosdep update
 RUN rosdep update
 
 # Source the ROS noetic setup file
