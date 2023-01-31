@@ -5,6 +5,7 @@ RUN apt update && apt upgrade -y
 
 # Install extra packages
 RUN apt install gdb -y
+RUN apt install git -y
 
 # Install dependencies not included for ROS Core Docker Images
 RUN apt install build-essential -y
