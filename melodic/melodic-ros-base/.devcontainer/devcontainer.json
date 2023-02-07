@@ -1,7 +1,11 @@
 {
   "dockerFile": "Dockerfile",
+  "containerEnv": {
+    "NVIDIA_DRIVER_CAPABILITIES": "all"
+  },
   "runArgs": [
     "--privileged",
-    "--network=host"
+    "--network=host",
+    "--gpus", "all"
   ]
 }
